@@ -1,21 +1,31 @@
-const getVal= () =>{
+const getVal= () =>{ 
+  
+  
     let txt = document.getElementById("search-box").value;
    const txt1 = txt.toLowerCase();
    const X = txt1.charAt(0).toUpperCase()+txt1.slice(1);
-async function createPage() {
+   async function createPage() {
   let response = await fetch(
     `https://ddragon.leagueoflegends.com/cdn/11.16.1/data/en_US/champion/${X}.json`,
     {
       method: "GET",
-      
     }
   )
   let data = await response.json();
 
  document.getElementById("info").style.display='';
  
-        
-  // document.getElementsByClassName("icon-btn").src= 'https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/'+X+'Q.png'
+        let spellQ = data.data[X].spells[0].image.full;
+        let spellW = data.data[X].spells[1].image.full;
+        let spellE = data.data[X].spells[2].image.full;
+        let spellR = data.data[X].spells[3].image.full;
+        let passive = data.data[X].passive.image.full;
+
+  document.getElementById("iconone").style.background= `url(https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/${spellQ})`;
+  document.getElementById("icontwo").style.background= `url(https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/${spellW})`;
+  document.getElementById("iconthree").style.background= `url(https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/${spellE})`;
+  document.getElementById("iconfour").style.background= `url(https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/${spellR})`;
+  document.getElementById("iconfive").style.background= `url(https://ddragon.leagueoflegends.com/cdn/12.2.1/img/passive/${passive})`;
   
 // abilityIconOne.src='https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/'+X+'Q.png';
 // document.body.appendChild(abilityIconOne);
@@ -78,6 +88,9 @@ async function createPage() {
     }
     createPage();
 
-
+  
 
 }
+
+    
+ 
