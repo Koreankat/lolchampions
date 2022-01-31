@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("https://thumbs.gfycat.com/VibrantOfficialFeline-size_restricted.gif");
+  background-size: cover;
+  background-attachment: fixed;
+  justify-content: center;
+  align-items: center;
+}
+#head {
+  width: 100%;
+  padding: 80px 0 40px;
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.726);
+}
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 70px;
+  font-style: italic;
+}
+h3 {
+  font-size: 30px;
+  font-style: italic;
+}
+#intro {
+  width: 500px;
+  margin-top: 0px;
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1;
+}
+label {
+  color: rgba(247, 243, 243, 0.829);
+  margin: auto;
+  text-align: center;
+  font-size: 50px;
+  display: block;
+}
+#search-box {
+  width: 400px;
+  align-items: center;
+  padding: 15px 15px 15px 40px;
+  background-image: url("https://cdn1.iconfinder.com/data/icons/pixel-perfect-at-16px-volume-1/16/5023-512.png");
+  background-size: 20px;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  font-size: 18px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+#dropdown {
+  width: 220px;
+  border-right: solid black 1px;
+  border-left: solid black 1px;
+  border-bottom: solid black 1px;
+  margin: 0 auto;
+
+  overflow-y: scroll;
+  background-color: white;
+}
+button {
+  margin: 0 auto;
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+  width: 100px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+.col {
+  flex-direction: column;
+  height: fit-content;
+}
+
+#intro h1 {
+  font-size: 100px;
+}
+#intro h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+}
+#info {
+  line-height: 1.8;
+  margin: 10px 10px 30px;
+}
+#champ-desc {
+  width: 60%;
+  padding: 20px 20px 0;
+}
+#lore {
+  text-indent: 30px;
+}
+#abilities > h1 {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #f0ce38;
+}
+iframe {
+  width: 100%;
+  height: 370px;
+  margin: 20px 0;
+}
+.abilities-info {
+  margin: 20px 0;
+  padding: 5px 15px;
+  border: solid #c5986b 1px;
+}
+#abilities > h1::first-letter {
+  font-size: 80px;
+}
+.hidden {
+  display: none;
+}
+#abilities-bar {
+  justify-content: space-evenly;
+}
+.icon-btn {
+  border: none;
+  width: 64px;
+  height: 64px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  outline: none;
+}
+.icon-btn:focus {
+  outline: solid #d0a85c 1px;
+  outline-offset: 5px;
+}
+.abilities-info > h3 {
+  color: #f0ce38;
+}
+.key {
+  text-transform: capitalize;
+  font-style: italic;
+  color: #b4b4b4;
+}
+.ability-desc {
+  margin-top: 10px;
+  text-indent: 20px;
+}
+#champ-info {
+  width: 40%;
+  border: solid #c9aa8b 1px;
+  padding: 10px 30px;
+}
+section {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 2;
+}
+section p:nth-child(odd) {
+  width: 55%;
+}
+section p:nth-child(even) {
+  width: 45%;
+  color: #c9aa8b;
+}
+#champ-info > h3 {
+  margin-top: 10px;
+  font-size: 26px;
+  color: #f0ce38;
+}

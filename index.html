@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>lolchampions</title>
+  </head>
+  <body class="search-page">
+    <div class="search-page" id="head">
+      <h3>league of legends</h3>
+      <h2>Champions info app !</h2>
+      <p id="intro">
+        With more than 140 champions, you’ll find the perfect match for your
+        playstyle. Master one, or master them all.
+      </p>
+    </div>
+
+    <div>
+      <label for="champions">Enter your champion !</label>
+      <input
+        type="text"
+        class="search"
+        id="search-box"
+        placeholder="Yasuo , Zed , Syndra , ...."
+      />
+      <button onclick="getVal()">ENTER</button>
+      
+    </div>
+    <div class="container " id="info" style="display: none;">
+        <div id="champ-desc">
+          <p id="lore"></p>
+          <div id="abilities">
+            <h1>abilities</h1>
+            <div id="videos" >
+              <iframe class="ability-videos hidden" frameborder="0"></iframe>
+              <iframe class="ability-videos hidden" frameborder="0"></iframe>
+              <iframe class="ability-videos hidden" frameborder="0"></iframe>
+              <iframe class="ability-videos hidden" frameborder="0"></iframe>
+              <iframe
+                class="ability-videos hidden d-none"
+                frameborder="0"
+              ></iframe>
+            </div>
+            <div class="container" id="abilities-bar">
+              
+                <button class="iconone icon-btn"></button>
+              </a>
+              
+                <button class="icontwo icon-btn"></button>
+              </a>
+              
+                <button class="iconthree icon-btn"></button>
+              </a>
+              
+                <button class="iconfour icon-btn"></button>
+              </a>
+             
+                <button class="iconfive icon-btn"></button>
+              </a>
+            </div>
+            <div class="abilities-info hidden"></div>
+            <div class="abilities-info hidden"></div>
+            <div class="abilities-info hidden"></div>
+            <div class="abilities-info hidden"></div>
+            <div class="abilities-info hidden"></div>
+          </div>
+        </div>
+        <div id="champ-info">
+          <h3>General Information</h3>
+          <section class="double-row" id="general-info"></section>
+          <h3>Base statistics</h3>
+          <section class="double-row" id="base-stats"></section>
+        </div>
+    <script src="/scripts/app.js"></script>
+  </body>
+</html>
