@@ -27,23 +27,6 @@ const getVal= () =>{
   document.getElementById("iconfour").style.background= `url(https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/${spellR})`;
   document.getElementById("iconfive").style.background= `url(https://ddragon.leagueoflegends.com/cdn/12.2.1/img/passive/${passive})`;
   
-// abilityIconOne.src='https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/'+X+'Q.png';
-// document.body.appendChild(abilityIconOne);
-//    let  abilityIconTwo= document.getElementsByClassName("icontwo");
-//    let  abilityIconThree= document.getElementsByClassName("iconthree");
-//    let  abilityIconFour= document.getElementsByClassName("iconfour");
-//    let abilityIconFive= document.getElementsByClassName("iconfive");
-
-   
-
-//      abilityIconOne=  'https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/'+X+'Q.png';
-//      abilityIconTwo=  'https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/'+X+'W.png';
-//      abilityIconThree='https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/'+X+'E.png';
-//      abilityIconFour= 'https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/'+X+'R.png'; 
-//      abilityIconFive= 'https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/'+X+'_Passive.png';
-
-// document.getElementsByClassName("iconone")
-// .style=`background-image:url(https://ddragon.leagueoflegends.com/cdn/12.2.1/img/spell/${X}Q.png)`
 
      
 
