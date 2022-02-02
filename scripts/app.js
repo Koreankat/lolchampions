@@ -5,13 +5,14 @@ const getVal = () => {
   const R = document.getElementById("iconfour")
   const P = document.getElementById("iconfive")
   const abilities = [Q, W, E, R]
+
   const txt = document.getElementById("search-box").value
   const txt1 = txt.toLowerCase()
   const X = txt1.charAt(0).toUpperCase() + txt1.slice(1)
 
   async function createPage() {
     let response = await fetch(
-      `https://ddragon.leagueoflegends.com/cdn/11.16.1/data/en_US/champion/${X}.json`,
+      `https://ddragon.leagueoflegends.com/cdn/12.2.1/data/en_US/champion/${X}.json`,
       {
         method: "GET",
       }
@@ -19,6 +20,43 @@ const getVal = () => {
     let data = await response.json()
 
     document.getElementById("info").style.display = ""
+    document.getElementById("intro").innerHTML = `
+      <h2>${data.data[X].title}</h2>
+      <h1>${data.data[X].name}</h1>`
+
+    // const key = data.data[X].key.padStart(4, "0")
+    // console.log(key)
+    // let videoQ = document.getElementById("videoone")
+    // videoQ.src =
+    //   "https://d28xe8vt774jo5.cloudfront.net/champion-abilities/+" +
+    //   key +
+    //   "/ability_" +
+    //   key +
+    //   "_Q1.webm"
+    // Q.addEventListener("click", () => {
+    //   for (let video of videoQ) {
+    //     if (!video.classList.contains("hidden")) {
+    //       video.classList.toggle("hidden")
+    //     }
+    //   }
+    //   videoQ.classList.toggle("hidden")
+    // })
+
+    // document.getElementById(
+    //   "videoone"
+    // ).style = `background-video:url(https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${key}/ability_${key}_Q1.webm)`
+    // document.getElementById(
+    //   "videotwo"
+    // ).style = `background-video:url(https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${key}/ability_${key}_W1.webm)`
+    // document.getElementById(
+    //   "videothree"
+    // ).style = `background-video:url(https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${key}/ability_${key}_E1.webm)`
+    // document.getElementById(
+    //   "videofour"
+    // ).style = `background-video:url(https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${key}/ability_${key}_R1.webm)`
+    // document.getElementById(
+    //   "videofive"
+    // ).style = `background-video:url(https://d28xe8vt774jo5.cloudfront.net/champion-abilities/${key}/ability_${key}_P1.webm)`
 
     const spellsId = data.data[X].spells
     const passive = data.data[X].passive.image.full
@@ -32,9 +70,46 @@ const getVal = () => {
 
     P.style.background = `url(https://ddragon.leagueoflegends.com/cdn/12.2.1/img/passive/${passive})`
 
-    document.getElementById("intro").innerHTML = `
-      <h2>${data.data[X].title}</h2>
-      <h1>${data.data[X].name}</h1>`
+    Q.addEventListener("click", () => {
+      document.getElementById("abilityOne").innerHTML = `
+        <div><h3 style="color:#f0ce38">${data.data[X].spells[0].name}</h3>
+        <p class="ability-desc">
+            ${data.data[X].spells[0].description}
+        </p>
+        </div>`
+    })
+    W.addEventListener("click", () => {
+      document.getElementById("abilityOne").innerHTML = `
+        <div><h3 style="color:#f0ce38">${data.data[X].spells[1].name}</h3>
+        <p class="ability-desc">
+            ${data.data[X].spells[1].description}
+        </p>
+        </div>`
+    })
+    E.addEventListener("click", () => {
+      document.getElementById("abilityOne").innerHTML = `
+        <div><h3 style="color:#f0ce38">${data.data[X].spells[2].name}</h3>
+        <p class="ability-desc">
+            ${data.data[X].spells[2].description}
+        </p>
+        </div>`
+    })
+    R.addEventListener("click", () => {
+      document.getElementById("abilityOne").innerHTML = `
+        <div><h3 style="color:#f0ce38">${data.data[X].spells[3].name}</h3>
+        <p class="ability-desc">
+            ${data.data[X].spells[3].description}
+        </p>
+        </div>`
+    })
+    P.addEventListener("click", () => {
+      document.getElementById("abilityOne").innerHTML = `
+        <div><h3 style="color:#f0ce38">${data.data[X].passive.name}</h3>
+        <p class="ability-desc">
+            ${data.data[X].passive.description}
+        </p>
+        </div>`
+    })
 
     document.getElementById("general-info").innerHTML = `
     <p style="color:lightgrey">Role:</p>
